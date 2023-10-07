@@ -12,7 +12,8 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        'galaxy': 'url(/galaxy.jpg)'
+        'galaxy': 'url(/galaxy.jpg)',
+        'auth-bg': 'url(/auth-bg.jpg)'
       },
       textColor: {
         'purple': '#7a0ffe'

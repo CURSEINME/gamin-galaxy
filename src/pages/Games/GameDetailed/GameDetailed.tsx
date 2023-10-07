@@ -46,8 +46,8 @@ const GameDetailed = () => {
 				</div>
 			) : (
 				<div>
-					<div className="flex flex-col items-center lg:flex-row lg:justify-between lg:gap-20">
-						<div className="md: flex flex-col items-center lg:items-start">
+					<div className="flex flex-col items-center lg:items-start lg:flex-row lg:justify-between lg:gap-20">
+						<div className="md: flex flex-col items-center lg:mt-[100px]">
 							<h1 className="max-w-[700px] pb-10 text-center text-7xl font-bold text-white">
 								{game?.name}
 							</h1>

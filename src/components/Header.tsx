@@ -43,7 +43,7 @@ const Header = () => {
 	}
 
 	return (
-		<div className="z-10 grid grid-cols-[0.1fr_10fr_30px] items-center gap-x-5 py-10 md:grid-cols-[0.1fr_10fr_0.1fr]">
+		<div className="z-10 grid grid-cols-[0.1fr_10fr_30px] items-center gap-x-5 md:grid-cols-[0.1fr_10fr_0.1fr] mb-10">
 			<Burger
 				type={user ? 'profile' : 'auth'}
 				active={burgerActive}

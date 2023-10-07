@@ -21,9 +21,10 @@ const GameScreenshots = ({ screenshots }: GameScreenshotsProps) => {
 		const resizeImage = useResizeImage(item.image)
 
 		return (
-			<LazyLoadImage
+			<img
 				key={item.id}
 				src={resizeImage}
+				className='rounded-xl'
 				onClick={() => setSliderModalActive(true)}
 			/>
 		)
