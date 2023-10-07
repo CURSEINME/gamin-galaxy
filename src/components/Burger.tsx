@@ -19,6 +19,7 @@ const Burger = ({ active, setActive, type }: BurgerProps) => {
 
 	const logout = () => {
 		dispatch(logOut(null))
+		setActive()
 		navigate('/', { replace: true })
 	}
 

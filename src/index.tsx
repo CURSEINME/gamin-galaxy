@@ -6,6 +6,7 @@ import './index.css'
 import { store } from './store/store'
 
 import { disableReactDevTools } from '@fvilers/disable-react-devtools'
+import { BrowserRouter, Route } from 'react-router-dom'
 
 if (process.env.NODE_ENV === 'production') disableReactDevTools()
 

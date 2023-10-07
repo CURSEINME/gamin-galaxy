@@ -2,6 +2,7 @@ import {
 	Route,
 	RouterProvider,
 	createBrowserRouter,
+	createHashRouter,
 	createRoutesFromElements
 } from 'react-router-dom'
 
@@ -14,7 +15,7 @@ import Profile from './pages/Profile'
 import Register from './pages/Register/Register'
 
 
-const router = createBrowserRouter(
+const router = createHashRouter(
 	createRoutesFromElements(
 		<Route>
 			<Route>
