@@ -8,10 +8,10 @@ import { RootState } from '../../../../store/store'
 
 interface IFormState {
 	slug: string
-  graphics: number,
-  gameplay: number,
-  sound: number,
-  storyLine: number
+	graphics: number
+	gameplay: number
+	sound: number
+	storyLine: number
 }
 
 const GameScoreForm = ({ closeModal }) => {
@@ -47,7 +47,7 @@ const GameScoreForm = ({ closeModal }) => {
 				className="flex flex-col"
 			>
 				<div className="flex items-center justify-between">
-					<label className="text-xl font-bold" htmlFor="graphics">
+					<label className="font-bold sm:text-xl" htmlFor="graphics">
 						Graphics
 					</label>
 					<div className="flex flex-col">
@@ -74,7 +74,7 @@ const GameScoreForm = ({ closeModal }) => {
 					</div>
 				</div>
 				<div className="flex items-center justify-between">
-					<label className="text-xl font-bold" htmlFor="gameplay">
+					<label className="font-bold sm:text-xl" htmlFor="gameplay">
 						Gameplay
 					</label>
 					<div className="flex flex-col">
@@ -101,7 +101,7 @@ const GameScoreForm = ({ closeModal }) => {
 					</div>
 				</div>
 				<div className="flex items-center justify-between">
-					<label className="text-xl font-bold" htmlFor="sound">
+					<label className="font-bold sm:text-xl" htmlFor="sound">
 						Sound
 					</label>
 					<div className="flex flex-col">
@@ -128,8 +128,8 @@ const GameScoreForm = ({ closeModal }) => {
 					</div>
 				</div>
 				<div className="flex items-center justify-between">
-					<label className="text-xl font-bold" htmlFor="storyLine">
-						Story line
+					<label className="font-bold sm:text-xl" htmlFor="storyLine">
+						Story
 					</label>
 					<div className="flex flex-col">
 						{errors?.storyLine && (
@@ -145,7 +145,7 @@ const GameScoreForm = ({ closeModal }) => {
 								<Rating
 									value={Number(value)}
 									onChange={onChange}
-									name="storyLine"
+									name="Story"
 									precision={0.5}
 									className="!text-[30px] sm:!text-[50px]"
 									sx={{ fontSize: '50px', color: '#7a0ffe' }}

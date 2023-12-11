@@ -30,11 +30,11 @@ const Profile = () => {
 
 		return (
 			<Link
-				to="/"
-				className="md: flex max-w-[1050px] grid-cols-2 flex-col items-center md:grid"
+				to={`/games/${game.slug}`}
+				className="flex max-w-[1050px] flex-col items-center md:grid md:grid-cols-2"
 				key={game.slug}
 			>
-				<div className="mb-4 flex items-center gap-5">
+				<div className="mb-4 flex w-full items-center gap-5">
 					<img className="h-[50px] rounded-sm" src={game.background_image} />
 					<span className="text-xl font-bold text-white">{game.name}</span>
 				</div>
@@ -74,18 +74,20 @@ const Profile = () => {
 			) : (
 				<div>
 					<h1 className="text-center text-4xl text-white">Profile</h1>
-					<ul className="my-10 flex flex-col gap-3">
-						<li className="flex gap-8">
-							<div className="text-2xl text-white">Name:</div>
-							<div className="text-2xl text-white">{user?.name}</div>
-						</li>
-						{currentUserId === user?._id && (
-							<li className="flex gap-10">
-								<div className="text-2xl text-white">Email:</div>
-								<div className="text-2xl text-white">{user?.email}</div>
+					<div className='flex justify-between'>
+						<ul className="my-10 flex flex-col gap-3">
+							<li className="flex gap-8">
+								<div className="text-2xl text-white">Name:</div>
+								<div className="text-2xl text-white">{user?.name}</div>
 							</li>
-						)}
-					</ul>
+							{currentUserId === user?._id && (
+								<li className="flex gap-10">
+									<div className="text-2xl text-white">Email:</div>
+									<div className="text-2xl text-white">{user?.email}</div>
+								</li>
+							)}
+						</ul>
+					</div>
 					<div>
 						<h1 className="text-center text-2xl text-white">Rated games</h1>
 						{ratedGames.length == 0 ? (

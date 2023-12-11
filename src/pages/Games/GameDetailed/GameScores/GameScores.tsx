@@ -31,7 +31,7 @@ const GameScores = () => {
 					/>
 					<div className="flex flex-col">
 						<div className="flex items-center justify-between text-xl text-white">
-							<h4>Grapics</h4>
+							<h4>Graphics</h4>
 							<Rating
 								value={gameScores?.graphics || 0}
 								name="read-only"

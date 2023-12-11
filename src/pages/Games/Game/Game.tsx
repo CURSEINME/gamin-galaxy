@@ -10,16 +10,13 @@ interface IGameProps {
 
 const Game = ({ name, slug, background_image }: IGameProps) => {
 	return (
-		<div>
-			<Link to={`/games/${slug}`} className="[&>span]:w-full">
-				<LazyLoadImage
-					effect='blur'
-					className="mb-5 h-56 w-full rounded-md object-cover !transition-all duration-200 hover:scale-105"
+		<div className='max-w-[310px]'>
+			<Link to={`/games/${slug}`} className='flex flex-col items-center'>
+				<img
+					className="mb-5 h-56 w-full  rounded-md object-cover !transition-all duration-200 hover:scale-105"
 					src={background_image}
 				/>
-				<div>
-					<h1 className="text-2xl font-bold text-white">{name}</h1>
-				</div>
+				<h1 className="text-2xl font-bold text-white text-center">{name}</h1>
 			</Link>
 		</div>
 	)

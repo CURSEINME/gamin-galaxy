@@ -30,7 +30,7 @@ const RegisterForm = () => {
 		reset
 	} = useForm<IRegisterForm>()
 
-	const [signUp] = useRegisterMutation()
+	const [signUp, {isLoading}] = useRegisterMutation()
 
 	const [errorMessage, setErrorMessage] = useState('')
 
@@ -126,7 +126,7 @@ const RegisterForm = () => {
 					{errorMessage}
 				</h4>
 			)}
-			<button className="button self-center">Register</button>
+			<button disabled={isLoading ? true : false} className="button self-center">{isLoading ? "Loading..." : "Register"}</button>
 		</form>
 	)
 }

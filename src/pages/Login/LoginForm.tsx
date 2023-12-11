@@ -33,7 +33,7 @@ const LoginForm = () => {
 		reset
 	} = useForm<ILoginForm>()
 
-	const [login] = useLoginMutation()
+	const [login, { isLoading }] = useLoginMutation()
 
 	const [errorMessage, setErrorMessage] = useState('')
 
@@ -105,7 +105,12 @@ const LoginForm = () => {
 					{errorMessage}
 				</h4>
 			)}
-			<button className="button button-white self-center">Login</button>
+			<button
+				disabled={isLoading ? true : false}
+				className="button button-white self-center"
+			>
+				{isLoading ? 'Loading...' : 'Login'}
+			</button>
 		</form>
 	)
 }

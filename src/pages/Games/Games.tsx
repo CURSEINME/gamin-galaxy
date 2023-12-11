@@ -15,7 +15,6 @@ const Games = () => {
 
 	const renderGames = games?.map((game, index) => {
 		const resizeImage = useResizeImage(game.background_image)
-
 		return (
 			<Game
 				key={index}
