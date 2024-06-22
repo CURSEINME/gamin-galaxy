@@ -1,9 +1,10 @@
+import { useEffect } from 'react'
 import { useLocation, useSearchParams } from 'react-router-dom'
 
 import Pagination from '../../components/Pagination'
-import useResizeImage from '../../components/utils'
-import { useGetAllGamesQuery } from '../../store/slices/gameDbApi/gameDbApi'
+import { useResizeImage } from '../../components/utils'
 import Game from './Game/Game'
+import { useGetAllGamesQuery } from '../../store/slices/games/gamesApiSlice'
 
 const Games = () => {
 	const [params, setParams] = useSearchParams()
@@ -35,6 +36,17 @@ const Games = () => {
 			: setParams({ query: searchName, page: String(page) })
 	}
 
+	useEffect(() => {
+		try {
+			fetch(
+				'https://api.rawg.io/api/games?key=c542e67aec3a4340908f9de9e86038af&search=dota'
+			)
+				.then(data => data.json())
+				.then(data => console.log(data, 'games'))
+		} catch (err) {
+			console.log(err)
+		}
+	}, [])
 	return (
 		<div>
 			{isFetching ? (

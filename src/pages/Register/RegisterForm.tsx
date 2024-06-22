@@ -4,8 +4,8 @@ import { useForm } from 'react-hook-form'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 
-import { useRegisterMutation } from '../../store/slices/serverApi/serverApi'
-import { setUser } from '../../store/slices/userSlice/userSlice'
+import { useRegisterMutation } from '../../store/slices/auth/authApiSlice'
+import { setUser } from '../../store/slices/user/userSlice'
 
 export interface IRegisterForm {
 	email: string
@@ -30,7 +30,7 @@ const RegisterForm = () => {
 		reset
 	} = useForm<IRegisterForm>()
 
-	const [signUp, {isLoading}] = useRegisterMutation()
+	const [signUp, { isLoading }] = useRegisterMutation()
 
 	const [errorMessage, setErrorMessage] = useState('')
 
@@ -126,7 +126,12 @@ const RegisterForm = () => {
 					{errorMessage}
 				</h4>
 			)}
-			<button disabled={isLoading ? true : false} className="button self-center">{isLoading ? "Loading..." : "Register"}</button>
+			<button
+				disabled={isLoading ? true : false}
+				className="button self-center"
+			>
+				{isLoading ? 'Loading...' : 'Register'}
+			</button>
 		</form>
 	)
 }

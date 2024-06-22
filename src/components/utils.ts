@@ -1,4 +1,6 @@
-const useResizeImage = (imageUrl: string): string => {
+import { useState, useEffect } from 'react'
+
+export const useResizeImage = (imageUrl: string): string => {
 	let indexGame = 0
 
 	if (!imageUrl) return imageUrl
@@ -18,4 +20,18 @@ const useResizeImage = (imageUrl: string): string => {
 	return leftSideOfUrl + resizeRoute + rightSideOfUrl
 }
 
-export default useResizeImage
+export const useDebounce = (value: string, delay = 1000) => {
+	const [debounceValue, setDebounceValue] = useState(value)
+
+	useEffect(() => {
+		const id = setTimeout(() => {
+			setDebounceValue(value)
+		},delay)
+		
+		return () => {
+			clearTimeout(id)
+		}
+	},[value, delay])
+
+	return debounceValue
+}

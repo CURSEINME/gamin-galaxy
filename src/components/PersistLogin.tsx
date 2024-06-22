@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom'
 
-import { useGetMeQuery } from '../store/slices/serverApi/serverApi'
+import { useGetMeQuery } from '../store/slices/user/userApiSlice'
 
 const PersistLogin = () => {
 	const token = localStorage.getItem('token')

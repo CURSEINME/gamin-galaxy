@@ -1,11 +1,10 @@
 import { useState } from 'react'
-import { LazyLoadImage } from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css'
 
 import Modal from '../../../components/Modal'
 import SlickSlider from '../../../components/SlickSlider'
-import useResizeImage from '../../../components/utils'
-import { IScreenshot } from '../../../store/slices/gameDbApi/types'
+import { useResizeImage } from '../../../components/utils'
+import { IScreenshot } from '../../../store/slices/games/types'
 import GameScores from './GameScores/GameScores'
 
 interface GameScreenshotsProps {
@@ -24,7 +23,7 @@ const GameScreenshots = ({ screenshots }: GameScreenshotsProps) => {
 			<img
 				key={item.id}
 				src={resizeImage}
-				className='rounded-xl'
+				className="rounded-xl"
 				onClick={() => setSliderModalActive(true)}
 			/>
 		)

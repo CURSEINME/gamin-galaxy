@@ -3,11 +3,9 @@ import { LazyLoadImage } from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css'
 import { useParams } from 'react-router-dom'
 
-import useResizeImage from '../../../components/utils'
-import {
-	useGetGameDetailQuery,
-	useGetGameScreenshotsQuery
-} from '../../../store/slices/gameDbApi/gameDbApi'
+import { useResizeImage } from '../../../components/utils'
+import { useGetGameDetailQuery } from '../../../store/slices/games/gamesApiSlice'
+import { useGetGameScreenshotsQuery } from '../../../store/slices/games/gamesApiSlice'
 import GameScreenshots from './GameScreenshots'
 
 const GameDetailed = () => {
@@ -46,14 +44,14 @@ const GameDetailed = () => {
 				</div>
 			) : (
 				<div>
-					<div className="flex flex-col items-center lg:items-start lg:flex-row lg:justify-between lg:gap-20">
+					<div className="flex flex-col items-center lg:flex-row lg:items-start lg:justify-between lg:gap-20">
 						<div className="flex flex-col items-center lg:mt-[100px]">
-							<h1 className="max-w-[700px] pb-10 text-center text-6xl sm:text-7xl font-bold text-white">
+							<h1 className="max-w-[700px] pb-10 text-center text-6xl font-bold text-white sm:text-7xl">
 								{game?.name}
 							</h1>
 							<div>
 								<div
-									className='max-w-[700px] pb-5 text-center font-bold text-white transition-all duration-500'
+									className="max-w-[700px] pb-5 text-center font-bold text-white transition-all duration-500"
 									dangerouslySetInnerHTML={{
 										__html: descMore ? game?.description || '' : descLess
 									}}
@@ -66,12 +64,14 @@ const GameDetailed = () => {
 								{descMore ? 'Less' : 'More'}
 							</button>
 							{renderStores?.length != 0 && (
-								<div className='flex flex-col items-center'>
+								<div className="flex flex-col items-center">
 									<h4 className="mb-5 mt-10 text-xl text-white">
 										{' '}
 										Where to buy
 									</h4>
-									<div className={`mb-14 flex flex-col gap-5 text-center md:grid md:grid-cols-3`}>
+									<div
+										className={`mb-14 flex flex-col gap-5 text-center md:grid md:grid-cols-3`}
+									>
 										{renderStores}
 									</div>
 								</div>

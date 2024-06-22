@@ -3,8 +3,8 @@ import { useForm } from 'react-hook-form'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 
-import { useLoginMutation } from '../../store/slices/serverApi/serverApi'
-import { setUser } from '../../store/slices/userSlice/userSlice'
+import { useLoginMutation } from '../../store/slices/auth/authApiSlice'
+import { setUser } from '../../store/slices/user/userSlice'
 
 export interface ILoginForm {
 	email: string
