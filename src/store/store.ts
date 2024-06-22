@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit'
 
-import { gameApi } from './slices/gameDbApi/gameDbApi'
-import { serverApi } from './slices/serverApi/serverApi'
-import userReducer from './slices/userSlice/userSlice'
+import { gameApi } from './apis/gameDbApi/gameDbApi'
+import { serverApi } from './apis/serverApi/serverApi'
+import userReducer from './slices/user/userSlice'
 
 export const store = configureStore({
 	reducer: {

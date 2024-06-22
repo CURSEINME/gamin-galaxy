@@ -3,7 +3,7 @@ import { Controller, useForm } from 'react-hook-form'
 import { useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 
-import { useAddGameScoresMutation } from '../../../../store/slices/serverApi/serverApi'
+import { useAddGameScoresMutation } from '../../../../store/slices/gameScore/gameScoreSlice'
 import { RootState } from '../../../../store/store'
 
 interface IFormState {

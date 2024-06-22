@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
 
-import { logOut } from '../store/slices/userSlice/userSlice'
+import { logOut } from '../store/slices/user/userSlice'
 import { RootState } from '../store/store'
 
 interface BurgerProps {

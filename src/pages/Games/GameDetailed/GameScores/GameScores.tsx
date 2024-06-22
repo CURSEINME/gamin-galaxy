@@ -4,7 +4,8 @@ import { useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 
 import Modal from '../../../../components/Modal'
-import { useGetGameScoresQuery } from '../../../../store/slices/serverApi/serverApi'
+import '../../../../store/apis/serverApi/serverApi'
+import { useGetGameScoresQuery } from '../../../../store/slices/gameScore/gameScoreSlice'
 import { RootState } from '../../../../store/store'
 import ScoreForm from './GameScoreForm'
 

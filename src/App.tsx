@@ -8,12 +8,11 @@ import {
 
 import Layout from './components/Layout'
 import PersistLogin from './components/PersistLogin'
-import Games from './pages/Games/Games'
 import GameDetailed from './pages/Games/GameDetailed/GameDetailed'
+import Games from './pages/Games/Games'
 import Login from './pages/Login/Login'
-import Profile from './pages/Profile'
+import Profile from './pages/Profile/Profile'
 import Register from './pages/Register/Register'
-
 
 const router = createHashRouter(
 	createRoutesFromElements(
