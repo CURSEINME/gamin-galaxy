@@ -26,11 +26,11 @@ const Search = () => {
 		}
 	}
   
-  const debounceValue = useDebounce(game.name)
+  const debounceValue = useDebounce(game.name, 1000)
 
 	return (
 		<div ref={searchRef} className='relative'>
-			<SearchForm game={game} setGame={setGame} setFocus={setFocus}/>
+			<SearchForm game={game} setGame={setGame} focus={focus} setFocus={setFocus}/>
 			<SearchList searchName={debounceValue} focus={focus} setFocus={setFocus}/>
 		</div>
 	)

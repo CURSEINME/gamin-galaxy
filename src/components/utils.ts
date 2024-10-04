@@ -20,7 +20,7 @@ export const useResizeImage = (imageUrl: string): string => {
 	return leftSideOfUrl + resizeRoute + rightSideOfUrl
 }
 
-export const useDebounce = (value: string, delay = 1000) => {
+export const useDebounce = (value: string, delay: number) => {
 	const [debounceValue, setDebounceValue] = useState(value)
 
 	useEffect(() => {

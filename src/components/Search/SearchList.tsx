@@ -21,7 +21,7 @@ const SearchList = ({
 		}
 	)
 
-	const gamesList = games?.slice(10).map(game => {
+	const gamesList = games?.slice(1, 10).map(game => {
 		return <Link onClick={() => setFocus(false)} to={`/games/${game.slug}`}>{game.name}</Link>
 	})
 
