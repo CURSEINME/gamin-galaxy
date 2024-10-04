@@ -47,9 +47,9 @@ const GameScreenshots = ({ screenshots }: GameScreenshotsProps) => {
 				>
 					{renderScreenshots}
 				</div>
-			</div>
-			<div className="mt-10">
-				<GameScores />
+				<div className="mt-10">
+					<GameScores />
+				</div>
 			</div>
 		</div>
 	)

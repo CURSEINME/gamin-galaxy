@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom'
 import { useResizeImage } from '../../../components/utils'
 import { useGetGameDetailQuery } from '../../../store/slices/games/gamesApiSlice'
 import { useGetGameScreenshotsQuery } from '../../../store/slices/games/gamesApiSlice'
+import GameScores from './GameScores/GameScores'
 import GameScreenshots from './GameScreenshots'
 
 const GameDetailed = () => {

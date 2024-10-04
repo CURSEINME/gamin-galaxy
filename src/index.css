@@ -54,18 +54,18 @@ html {
 
   transition: all 200ms;
 }
-/* .button--black {
+.button--black {
   border: solid black 2px;
   color: black;
-} */
+}
 .button:hover {
   background-color: white;
   color: #7a0ffe;
 }
-/* .button--black:hover { 
+.button--black:hover { 
   background-color: black;
   color: white;
-} */
+}
 .button--purple:hover {
   background-color: #7a0ffe;
   border: solid #7a0ffe 2px;

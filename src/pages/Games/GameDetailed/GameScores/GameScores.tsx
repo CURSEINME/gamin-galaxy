@@ -7,7 +7,7 @@ import Modal from '../../../../components/Modal'
 import '../../../../store/apis/serverApi/serverApi'
 import { useGetGameScoresQuery } from '../../../../store/slices/gameScore/gameScoreSlice'
 import { RootState } from '../../../../store/store'
-import ScoreForm from './GameScoreForm'
+import GameScoreForm from './GameScoreForm'
 
 const GameScores = () => {
 	const [reviewModalActive, setReviewModalActive] = useState(false)
@@ -27,7 +27,7 @@ const GameScores = () => {
 						active={reviewModalActive}
 						setActive={() => setReviewModalActive(false)}
 						children={
-							<ScoreForm closeModal={() => setReviewModalActive(false)} />
+							<GameScoreForm closeModal={() => setReviewModalActive(false)} />
 						}
 					/>
 					<div className="flex flex-col">
